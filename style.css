@@ -1,0 +1,627 @@
+/* <style> */
+html {
+    scroll-behavior: smooth;
+  }
+  
+        body {
+            background-color: #0f172a;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* .navbar { */
+            /* display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #1e293b;
+            position: sticky; */
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: #1e293b;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                z-index: 1000; /* Ensures it stays above other elements */
+            }
+body {
+    padding-top: 80px; /* Adds space so content doesn't go under the navbar */
+}
+
+        /* } */
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0 20px;
+            padding: 0;
+            display: flex;
+        }
+        .navbar ul li {
+            margin: 0 20px;
+            /* margin: 0 55px; */
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+        }
+        .image-container {
+            position: relative;
+            border: 5px solid #fbbf24;
+            padding: 10px;
+            margin-right: 50px;
+        }
+        .image-container img {
+            width: 500px;
+            height: auto;
+            display: block;
+        }
+        .content {
+            max-width: 400px;
+        }
+        .content h1 {
+            font-size: 40px;
+            margin: 10px 0;
+        }
+        .content h1 span {
+            color: #fbbf24;
+        }
+        .content p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #cbd5e1;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #1e293b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 10%;
+    gap: 40px;
+}
+
+.about-text {
+    max-width: 50%;
+}
+
+.about h1 {
+    font-size: 60px;
+    color: #fbbf24;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.about-image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+
+/* Services Section Styling */
+/* Services Section */
+#services {
+    text-align: center;
+    padding: 50px 0;
+    background: #1e293b;
+    color: white;
+}
+
+/* Services Title */
+#services h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Services Container (Flexbox for Equal Column Height) */
+.services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Service Box */
+.service-box {
+    background: #1E2230;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 150px; /* Ensures same height */
+}
+
+/* Service Box Heading */
+.service-box h4 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #00d9ff;
+}
+
+/* Hover Effect */
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 217, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-container {
+        width: 90%;
+    }
+}
+
+/* Ensure responsiveness for smaller screens */
+@media (max-width: 992px) { /* Adjust for tablets & smaller screens */
+    .service-box {
+        width: calc(50% - 20px); /* Two per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) { /* Adjust for mobile screens */
+    .service-box {
+        width: 100%; /* Stacks boxes vertically on small screens */
+    }
+}
+
+/* Services Section */
+#services {
+    text-align: center;
+    padding: 50px 0;
+    background: #12151c;
+    color: white;
+}
+
+/* Section Title */
+#services h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #fbbf24;
+}
+
+/* Flexbox Container for Two Services */
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Adds 30px gap between the divs */
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+/* Service Box */
+.service-box {
+    background: #1E2230;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: calc(50% - 15px); /* Ensures equal width with gap */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Left and Right Alignment */
+/* .service-box:nth-child(odd) {
+    align-self: flex-start;
+}
+
+.service-box:nth-child(even) {
+    align-self: flex-end;
+} */
+/* Image Styling */
+.service-box img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Heading Styling */
+.service-box h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    /* color: #fbbf24; */
+    color: #00d9ff;
+}
+
+
+/* Paragraph Styling */
+.service-box p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Hover Effect */
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 217, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .service-box {
+        width: 100%;
+    }
+}
+
+    /* Expertise Section Styling */
+.expertise {
+    text-align: center;
+    padding: 50px 0;
+    background: #1e293b;
+    color: #facc57;
+}
+
+/* Expertise Title */
+.expertise h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Expertise List */
+.expertise ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #00d9ff;
+}
+
+/* Expertise Box */
+.expertise li {
+    background: #1E2230;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.expertise li:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .expertise ul {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
+
+
+#portfolio {
+    padding: 50px 0;
+    background-color: #1e293b;
+    /* color: #facc57; */
+}
+#portfolio h2 {
+    /* font-size: 2rem;
+    margin-bottom: 30px; */
+    color: #facc57;
+}
+
+/* Center the project title */
+.text-center {
+    text-align: center;
+    color: #facc57;
+}
+
+/* Card Layout - Flexbox for Single Row Alignment */
+.row {
+    display: flex; /* Enables flexbox */
+    justify-content: center; /*Centers cards in a row*/
+    gap: 20px;  /*Adds spacing between cards*/
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Individual Card Styles */
+.card {
+    flex: 1; /* Distributes equal width */
+    max-width: 350px; /* Prevents oversizing */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+    background-color: #1b1b37;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Card Image */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+
+/* Card Body */
+.card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Button Styling */
+.btn-success {
+    background-color: #198754;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-success:hover {
+    background-color: #145c38;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .row {
+        flex-wrap: nowrap; /* Keeps all in one row on large screens */
+        overflow-x: auto; /* Enables horizontal scrolling if needed */
+    }
+
+    .card {
+        flex: 0 0 auto; /* Ensures cards maintain their width */
+    }
+}
+
+@media (max-width: 992px) {
+    .row {
+        flex-wrap: wrap; /* Wraps items for smaller screens */
+        justify-content: center;
+    }
+
+    .card {
+        flex: 1 1 300px; /* Adjusts width dynamically */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%; /* Makes cards full width on small screens */
+    }
+}
+
+
+        /* Contact Section */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e293b;
+    padding: 50px;
+    border-radius: 10px;
+    color: #facc57;
+}
+
+.contact-section h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #facc57;
+}
+
+.contact-section img {
+    width: 250px;
+}
+
+/* Form Styles */
+.contact-section form {
+    background: #1f242f;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #252933;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+.contact-section input::placeholder,
+.contact-section textarea::placeholder {
+    color: #888;
+}
+
+.contact-section textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Button */
+.contact-section button {
+    background: #fbbf24;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.contact-section button:hover {
+    background: #facc57;
+}
+
+.contact-section button::after {
+    content: "📨";
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-section form {
+        width: 100%;
+    }
+
+    .contact-section img {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+}
+       
+        /* Footer Styling */
+/* Footer Styling */
+.footer {
+    background: #12151c;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: transform 0.3s, color 0.3s;
+}
+
+/* Hover Effects */
+.icon:hover {
+    transform: scale(1.2);
+}
+
+/* Social Media Colors */
+.fb {
+    color: #1877F2; /* Facebook Blue */
+}
+
+.ig {
+    color: #E4405F; /* Instagram Pink */
+}
+
+.twitter {
+    color: #1DA1F2; /* Twitter Blue */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+    /* </style> */
